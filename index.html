@@ -1,3 +1,4 @@
+ss
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1314,20 +1315,142 @@
     }
 
     /* ── Skill jars ── */
-    .jars{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
-    @media(max-width:820px){.jars{grid-template-columns:1fr}}
-    .jar{border:1px solid var(--line);border-radius:18px;background:var(--white);padding:1.2rem 1.2rem 1.4rem;text-align:center}
-    .jar h3{display:flex;justify-content:space-between;align-items:baseline;font:700 1.25rem var(--head);text-align:left}
-    .jar h3 span{font:500 .85rem var(--body);color:var(--ink-soft)}
-    .jar canvas{display:block;width:100%;height:clamp(360px,80vw,470px);margin-top:.4rem;touch-action:pan-y}
-    .jar-cap{min-height:3.2em;margin:.4rem 0 .8rem;color:var(--ink-soft);font-size:.95rem}
-    .jar-cap b{color:var(--ink)}
-    .jar-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem}
-    .jar-chips button,.jar-shake{font:600 .85rem var(--body);color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:999px;padding:.4rem .85rem;cursor:pointer;transition:background .2s,color .2s,transform .2s}
-    .jar-chips button::before{content:"";display:inline-block;width:.6rem;height:.6rem;border-radius:50%;background:var(--c);margin-right:.45rem}
-    .jar-chips button:hover,.jar-shake:hover{transform:translateY(-2px);border-color:var(--green)}
-    .jar-chips button[aria-pressed="true"]{background:var(--deep);border-color:var(--deep);color:#fff}
-    .jar-shake{margin-top:1rem;background:transparent}
+    .jars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem
+    }
+
+    @media(max-width:820px) {
+      .jars {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .jar {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--white);
+      padding: 1.2rem 1.2rem 1.4rem;
+      text-align: center
+    }
+
+    .jar h3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font: 700 1.25rem var(--head);
+      text-align: left
+    }
+
+    .jar h3 span {
+      font: 500 .85rem var(--body);
+      color: var(--ink-soft)
+    }
+
+    .jar canvas {
+      display: block;
+      width: 100%;
+      height: clamp(360px, 80vw, 470px);
+      margin-top: .4rem;
+      touch-action: pan-y
+    }
+
+    .jar-cap {
+      min-height: 3.2em;
+      margin: .4rem 0 .8rem;
+      color: var(--ink-soft);
+      font-size: .95rem
+    }
+
+    .jar-cap b {
+      color: var(--ink)
+    }
+
+    .jar-chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .5rem
+    }
+
+    .jar-chips button,
+    .jar-shake {
+      font: 600 .85rem var(--body);
+      color: var(--ink);
+      background: var(--paper);
+      border: 1.5px solid var(--line);
+      border-radius: 999px;
+      padding: .4rem .85rem;
+      cursor: pointer;
+      transition: background .2s, color .2s, transform .2s
+    }
+
+    .jar-chips button::before {
+      content: "";
+      display: inline-block;
+      width: .6rem;
+      height: .6rem;
+      border-radius: 50%;
+      background: var(--c);
+      margin-right: .45rem
+    }
+
+    .jar-chips button:hover,
+    .jar-shake:hover {
+      transform: translateY(-2px);
+      border-color: var(--green)
+    }
+
+    .jar-chips button[aria-pressed="true"] {
+      background: var(--deep);
+      border-color: var(--deep);
+      color: #fff
+    }
+
+    .jar-shake {
+      margin-top: 1rem;
+      background: transparent
+    }
+
+    /* ── Portrait caption: real, readable name ── */
+    .portrait {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-self: stretch;
+      min-width: 0
+    }
+
+    .portrait .hero-photo-wrap {
+      flex: 1
+    }
+
+    .portrait figcaption {
+      text-align: center
+    }
+
+    .portrait figcaption strong {
+      display: block;
+      font: 800 1.4rem/1.2 var(--head);
+      letter-spacing: -.01em;
+      color: var(--ink)
+    }
+
+    .portrait figcaption span {
+      display: block;
+      margin-top: .2rem;
+      font-size: .92rem;
+      color: var(--ink-soft)
+    }
+
+    @media(max-width:720px) {
+      .portrait .hero-photo-wrap {
+        flex: none
+      }
+    }
   </style>
 </head>
 
@@ -1341,7 +1464,8 @@
       <a class="logo" href="#top">Damola Arasanyin</a>
       <nav aria-label="Main">
         <a href="#dashboards">Dashboards</a><a href="#work">Summary &amp; Findings</a><a
-          href="#automation">Automation</a><a href="#experience">Experience</a><a href="#toolkit">Skills</a><a href="#contact">Contact</a>
+          href="#automation">Automation</a><a href="#experience">Experience</a><a href="#toolkit">Skills</a><a
+          href="#contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -1351,10 +1475,11 @@
       <div class="wrap hero-in">
         <div class="hero-top">
           <div>
-            <h1>I turn messy data into dashboards and automations people use.</h1>
-            <p>Data analyst, Power BI developer and automation specialist. Three years of cleaning data, building
-              reports
-              and removing manual work, including on large healthcare datasets.</p>
+            <h1>I transform messy data into actionable dashboards and business automation solutions.</h1>
+            <p>Data Analyst, Power BI Developer, and Automation Specialist with three years of experience cleaning and
+              analyzing data, building reports and dashboards, delivering business solutions,
+              providing data-driven recommendations, and automating manual processes,
+              including workflows involving large healthcare datasets.</p>
             <div class="btns">
               <a class="btn primary" href="#dashboards">See my dashboards</a>
               <a class="btn" href="#work"
@@ -1362,9 +1487,13 @@
                 Findings</a>
             </div>
           </div>
-          <div class="hero-photo-wrap">
-            <img src="assets/Damola Arasanyin.png" alt="Damola Arasanyin">
-          </div>
+          <figure class="portrait">
+            <div class="hero-photo-wrap">
+              <img src="assets/Damola Arasanyin.png" alt="Damola Arasanyin">
+            </div>
+            <figcaption><strong>Damola Arasanyin</strong><span>Data Analyst, Power BI Developer, Automation
+                Specialist</span></figcaption>
+          </figure>
         </div>
 
 
@@ -1412,18 +1541,18 @@
         <!-- end hero slideshow -->
 
         <div class="funnel" id="dashboards">
-          <h2>From messy data to live dashboards</h2>
-          <p class="lead">Raw records enter from every direction. Cleaned, validated and modelled, they come out as
-            dashboards you can use. Move your pointer through the stream, or pick an outlet to open its dashboard.</p>
-          <div class="funnel-box">
-            <canvas id="funnelCv" role="img"
-              aria-label="Animated funnel: scattered raw data values enter at the top, are cleaned at the neck, and flow into three dashboard outlets."></canvas>
-            <div class="outlets">
-              <button type="button"><span>HR Attrition</span><small>Why people leave</small></button>
-              <button type="button"><span>Ridex Executive</span><small>Trips and drivers</small></button>
-              <button type="button"><span>Global Electronics</span><small>Sales and revenue</small></button>
+          <h2>From messy data to live dashboards and actionable insights/h2>
+            <p class="lead">Raw records enter from every direction. Cleaned, validated and modelled, they come out as
+              dashboards you can use. Move your pointer through the stream, or pick an outlet to open its dashboard.</p>
+            <div class="funnel-box">
+              <canvas id="funnelCv" role="img"
+                aria-label="Animated funnel: scattered raw data values enter at the top, are cleaned at the neck, and flow into three dashboard outlets."></canvas>
+              <div class="outlets">
+                <button type="button"><span>HR Attrition</span><small>Why people leave</small></button>
+                <button type="button"><span>Ridex Executive</span><small>Trips and drivers</small></button>
+                <button type="button"><span>Global Electronics</span><small>Sales and revenue</small></button>
+              </div>
             </div>
-          </div>
         </div>
         <!-- LIVE POWER BI DASHBOARD & REACTIVE LIKE -->
         <div class="live-dashboard-section" id="live-dashboard">
@@ -1746,20 +1875,28 @@
     <section id="toolkit">
       <div class="wrap">
         <h2>Skills in the jar</h2>
-        <p class="lead">Two jars. One holds the tools I use to make sense of data, the other holds the tools I use to take manual work off people. Drag the balls, shake a jar, or tap a skill.</p>
+        <p class="lead">Two jars. One holds the tools I use to make sense of data, the other holds the tools I use to
+          take manual work off people. Drag the balls, shake a jar, or tap a skill.</p>
         <div class="jars">
           <div class="jar" data-pal="#0f3d33,#1b6b58,#2fa283,#13574a,#3fb596,#2a8a70,#52c1a4">
             <h3>Data Analysis <span>7 tools</span></h3>
             <canvas aria-hidden="true"></canvas>
             <p class="jar-cap" aria-live="polite">Drag a ball around, or tap a skill below.</p>
             <div class="jar-chips" role="group" aria-label="Data analysis skills">
-              <button type="button" data-label="Power BI" data-s="1.18" data-desc="Dashboards, DAX measures and KPI reporting.">Power BI</button>
-              <button type="button" data-label="Excel" data-s="1.05" data-desc="Cleaning, pivot tables and analysis models.">Excel</button>
-              <button type="button" data-label="SQL" data-s="1" data-desc="Querying and validating data in MySQL.">SQL</button>
-              <button type="button" data-label="Python" data-s="1.08" data-desc="Data cleaning, analysis and scripting.">Python</button>
-              <button type="button" data-label="R" data-s=".85" data-desc="Statistical analysis and visualisation.">R</button>
-              <button type="button" data-label="SPSS" data-s=".95" data-desc="Statistical testing for research data.">SPSS</button>
-              <button type="button" data-label="Sheets & Docs" data-s="1" data-desc="Shared reports, templates and live data sheets.">Google Sheets &amp; Docs</button>
+              <button type="button" data-label="Power BI" data-s="1.18"
+                data-desc="Dashboards, DAX measures and KPI reporting.">Power BI</button>
+              <button type="button" data-label="Excel" data-s="1.05"
+                data-desc="Cleaning, pivot tables and analysis models.">Excel</button>
+              <button type="button" data-label="SQL" data-s="1"
+                data-desc="Querying and validating data in MySQL.">SQL</button>
+              <button type="button" data-label="Python" data-s="1.08"
+                data-desc="Data cleaning, analysis and scripting.">Python</button>
+              <button type="button" data-label="R" data-s=".85"
+                data-desc="Statistical analysis and visualisation.">R</button>
+              <button type="button" data-label="SPSS" data-s=".95"
+                data-desc="Statistical testing for research data.">SPSS</button>
+              <button type="button" data-label="Sheets & Docs" data-s="1"
+                data-desc="Shared reports, templates and live data sheets.">Google Sheets &amp; Docs</button>
             </div>
             <button type="button" class="jar-shake">Shake the jar</button>
           </div>
@@ -1768,11 +1905,16 @@
             <canvas aria-hidden="true"></canvas>
             <p class="jar-cap" aria-live="polite">Drag a ball around, or tap a skill below.</p>
             <div class="jar-chips" role="group" aria-label="Automation skills">
-              <button type="button" data-label="Make" data-s="1.1" data-desc="No-code scenarios that connect apps and move data.">Make</button>
-              <button type="button" data-label="Zapier" data-s="1.1" data-desc="Triggers and actions that remove manual steps.">Zapier</button>
-              <button type="button" data-label="APIs" data-s="1" data-desc="Connecting systems and pulling data through REST APIs.">APIs</button>
-              <button type="button" data-label="Data Scraping" data-s="1.15" data-desc="Collecting web data into clean, structured tables.">Data Scraping</button>
-              <button type="button" data-label="Apps Script" data-s="1.15" data-desc="Google Apps Script tools for invoices, inventory and reports.">Google Apps Script</button>
+              <button type="button" data-label="Make" data-s="1.1"
+                data-desc="No-code scenarios that connect apps and move data.">Make</button>
+              <button type="button" data-label="Zapier" data-s="1.1"
+                data-desc="Triggers and actions that remove manual steps.">Zapier</button>
+              <button type="button" data-label="APIs" data-s="1"
+                data-desc="Connecting systems and pulling data through REST APIs.">APIs</button>
+              <button type="button" data-label="Data Scraping" data-s="1.15"
+                data-desc="Collecting web data into clean, structured tables.">Data Scraping</button>
+              <button type="button" data-label="Apps Script" data-s="1.15"
+                data-desc="Google Apps Script tools for invoices, inventory and reports.">Google Apps Script</button>
             </div>
             <button type="button" class="jar-shake">Shake the jar</button>
           </div>
@@ -2229,8 +2371,10 @@
       function init(root) {
         const cv = root.querySelector('canvas'), cx = cv.getContext('2d'), cap = root.querySelector('.jar-cap');
         const chips = [...root.querySelectorAll('.jar-chips button')], pal = root.dataset.pal.split(',');
-        const balls = chips.map((b, i) => ({ label: b.dataset.label, desc: b.dataset.desc, s: +b.dataset.s || 1, c: pal[i % pal.length],
-          x: 0, y: -999, vx: 0, vy: 0, r: 30, t: 0, on: false, lines: [], fs: 12 }));
+        const balls = chips.map((b, i) => ({
+          label: b.dataset.label, desc: b.dataset.desc, s: +b.dataset.s || 1, c: pal[i % pal.length],
+          x: 0, y: -999, vx: 0, vy: 0, r: 30, t: 0, on: false, lines: [], fs: 12
+        }));
         chips.forEach((b, i) => b.style.setProperty('--c', balls[i].c));
         let W = 0, H = 0, dpr = 1, JL, JR, JT, JB, col = {}, raf = 0, vis = false, dropped = false, idle = 0;
         let hover = null, sel = null, drag = null;
